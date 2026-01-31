@@ -43,6 +43,13 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "d11ed674-b102-4003-b2d3-657e2b86fa56"
+      }
+    },
+    "owner": "pstcc-sports-app"
   }
 }
