@@ -44,11 +44,11 @@ const styles = StyleSheet.create({
     },
     infoText: {
         fontSize: 16,
-        color: '#666',
+        color: '#000',
         marginBottom: 20,
     },
     logoutButton: {
-        backgroundColor: '#ff5c5c',
+        backgroundColor: '#FF8200',
         paddingVertical: 10,
         paddingHorizontal: 20,
         borderRadius: 5,

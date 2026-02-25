@@ -6,19 +6,19 @@ export default function RootLayout() {
     return (
         <Tabs
             screenOptions={{
-                tabBarActiveTintColor: '#ffd33d',
+                tabBarActiveTintColor: '#FFF',
                 headerStyle: {
-                    backgroundColor: '#25292e'
+                    backgroundColor: '#FF8200'
                 },
                 headerShadowVisible: false,
                 headerTintColor: '#fff',
                 headerTitleAlign: 'center',
                 tabBarStyle: {
-                    backgroundColor: '#25292e'
+                    backgroundColor: '#FF8200'
                 },
                 // Persistent user icon to take to user page
                 headerLeft: () => (
-                    <TouchableOpacity onPress={() => router.push('/(tabs)/userPage')}>
+                    <TouchableOpacity onPress={() => router.push('/(tabs)/userPageScreen')}>
                         <Ionicons name="person-circle-outline" size={28} color="#fff" style={{ marginLeft: 16 }} />
                     </TouchableOpacity>
                 ),
@@ -34,21 +34,18 @@ export default function RootLayout() {
                 }}
             />
             <Tabs.Screen
-                name="about"
+                name="userPageScreen"
                 options={{
-                    title: 'About',
-                    tabBarIcon: ({ color, focused }) => (
-                        <Ionicons name={focused ? 'information-circle' : 'information-circle-outline'} color={color} size={24} />
-                    )
-                }}
-            />
-            <Tabs.Screen
-                name="userPage"
-                options={{
-                    title: 'User Page',
+                    title: 'Profile',
                     tabBarIcon: ({ color, focused }) => (
                         <Ionicons name={focused ? 'person-circle' : 'person-circle-outline'} color={color} size={24} />
                     )
+                }}
+            />
+            <Tabs.Screen 
+                name="myGamesScreen"
+                options={{
+                    title: 'My Games',
                 }}
             />
         </Tabs>
