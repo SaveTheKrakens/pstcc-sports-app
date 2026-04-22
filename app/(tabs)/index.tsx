@@ -21,7 +21,7 @@ export default function Index() {
                     <Text style={styles.buttonText}>Groups</Text>
                 </Link>
                 <Link href="/" style={styles.button}>
-                    <Text style={styles.buttonText}>New Game</Text>
+                    <Text style={styles.buttonText}>Create Game</Text>
                 </Link>
             </View>
         </SafeAreaView>

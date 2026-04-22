@@ -48,6 +48,18 @@ export default function RootLayout() {
                     title: 'My Games',
                 }}
             />
+            <Tabs.Screen 
+                name="groupsScreen"
+                options={{
+                    title: 'My Groups',
+                }}
+            />
+            <Tabs.Screen 
+                name="newGameScreen"
+                options={{
+                    title: 'New Game',
+                }}
+            />
         </Tabs>
     );
 }

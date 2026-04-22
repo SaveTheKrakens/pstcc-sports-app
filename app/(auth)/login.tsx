@@ -90,7 +90,7 @@ export default function LoginScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#1a1a2e',
+        backgroundColor: '#ffffff', // White background for light theme
     },
     content: {
         flex: 1,
@@ -100,13 +100,13 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 32,
         fontWeight: 'bold',
-        color: '#fff',
+        color: '#FF8200', // UTK orange for the title
         textAlign: 'center',
         marginBottom: 8,
     },
     subtitle: {
         fontSize: 16,
-        color: '#888',
+        color: '#58595B', // Neutral gray for subtitle
         textAlign: 'center',
         marginBottom: 32,
     },
@@ -114,16 +114,16 @@ const styles = StyleSheet.create({
         gap: 16,
     },
     input: {
-        backgroundColor: '#16213e',
+        backgroundColor: '#F2F2F2', // Light gray for input background
         borderRadius: 12,
         padding: 16,
         fontSize: 16,
-        color: '#fff',
+        color: '#000000', // Black text for inputs
         borderWidth: 1,
-        borderColor: '#0f3460',
+        borderColor: '#FF8200', // UTK orange for input border
     },
     button: {
-        backgroundColor: '#4CAF50',
+        backgroundColor: '#FF8200', // UTK orange for buttons
         borderRadius: 12,
         padding: 16,
         alignItems: 'center',
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
         opacity: 0.6,
     },
     buttonText: {
-        color: '#fff',
+        color: '#ffffff', // White text for buttons
         fontSize: 18,
         fontWeight: '600',
     },
@@ -143,11 +143,11 @@ const styles = StyleSheet.create({
         marginTop: 24,
     },
     footerText: {
-        color: '#888',
+        color: '#58595B', // Neutral gray for footer text
         fontSize: 14,
     },
     link: {
-        color: '#4CAF50',
+        color: '#FF8200', // UTK orange for links
         fontSize: 14,
         fontWeight: '600',
     },

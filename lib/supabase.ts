@@ -1,6 +1,7 @@
 import 'react-native-url-polyfill/auto';
 import * as SecureStore from 'expo-secure-store';
 import {createClient} from '@supabase/supabase-js';
+import Constants from 'expo-constants';
 
 //Secure storage adapter for Expo
 const ExpoSecureStoreAdapter = {
@@ -15,10 +16,16 @@ const ExpoSecureStoreAdapter = {
     },
 };
 
-//Supabase info, turn into env variables soon-----------------------------------!!
-const supabaseUrl = 'https://luqoirzbpefuhxcshzan.supabase.co';
-const supabaseAnonKey = 'sb_publishable_6R93qC9ENKbigWr-tZ_56w_Qu-Ystp_';
+//Supabase info pulled from .env
+const supabaseUrl = Constants.expoConfig?.extra?.supabaseUrl;
+const supabaseAnonKey = Constants.expoConfig?.extra?.supabaseAnonKey;
 
+//Error handling to make sure .env vars arent missing
+if (!supabaseUrl || !supabaseAnonKey) {
+    throw new Error('Missing Supabase environment variables');
+}
+
+//Export the connection to the supabase database
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
     auth: {
         storage: ExpoSecureStoreAdapter,

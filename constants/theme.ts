@@ -51,3 +51,38 @@ export const Fonts = Platform.select({
     mono: "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
   },
 });
+
+const theme = {
+  colors: {
+    background: '#ffffff', // White background for light theme
+    primary: '#FF8200', // UTK orange
+    secondary: '#4EA8DE', // Lady Vols light blue
+    text: '#000000', // Black text
+    subtitle: '#58595B', // Neutral gray
+    inputBackground: '#F2F2F2', // Light gray for inputs
+    inputBorder: '#FF8200', // UTK orange for input borders
+    buttonText: '#ffffff', // White text for buttons
+    link: '#FF8200', // UTK orange for links
+  },
+  spacing: {
+    small: 8,
+    medium: 16,
+    large: 24,
+  },
+  borderRadius: {
+    small: 8,
+    medium: 12,
+  },
+  fontSize: {
+    small: 14,
+    medium: 16,
+    large: 18,
+    title: 32,
+  },
+  fontWeight: {
+    regular: 400,
+    bold: 600,
+  },
+};
+
+export default theme;
