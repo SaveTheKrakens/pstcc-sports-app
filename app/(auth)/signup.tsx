@@ -16,6 +16,8 @@ import { useAuth } from '../../context/AuthContext';
 import theme from '../../constants/theme';
 
 export default function SignupScreen() {
+
+  console.log(theme.fontWeight.bold); // Should log 600
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -140,7 +142,7 @@ const styles = StyleSheet.create<{
   },
   title: {
     fontSize: theme.fontSize.title,
-    fontWeight: theme.fontWeight.bold,
+    fontWeight: 600,
     color: theme.colors.primary,
     textAlign: 'center',
     marginBottom: theme.spacing.small,
@@ -176,7 +178,7 @@ const styles = StyleSheet.create<{
   buttonText: {
     color: theme.colors.buttonText,
     fontSize: theme.fontSize.large,
-    fontWeight: theme.fontWeight.bold,
+    fontWeight: 600,
   },
   footer: {
     flexDirection: 'row',
@@ -190,6 +192,6 @@ const styles = StyleSheet.create<{
   link: {
     color: theme.colors.link,
     fontSize: theme.fontSize.small,
-    fontWeight: theme.fontWeight.bold,
+    fontWeight: 600,
   },
 });

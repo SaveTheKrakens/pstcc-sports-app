@@ -1,25 +1,25 @@
 import { Tabs, router } from 'expo-router';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { TouchableOpacity } from 'react-native';
+import theme from '../../constants/theme';
 
 export default function RootLayout() {
     return (
         <Tabs
             screenOptions={{
-                tabBarActiveTintColor: '#FFF',
+                tabBarActiveTintColor: theme.colors.buttonText,
                 headerStyle: {
-                    backgroundColor: '#FF8200'
+                    backgroundColor: theme.colors.primary,
                 },
                 headerShadowVisible: false,
-                headerTintColor: '#fff',
+                headerTintColor: theme.colors.buttonText,
                 headerTitleAlign: 'center',
                 tabBarStyle: {
-                    backgroundColor: '#FF8200'
+                    backgroundColor: theme.colors.primary,
                 },
-                // Persistent user icon to take to user page
                 headerLeft: () => (
                     <TouchableOpacity onPress={() => router.push('/(tabs)/userPageScreen')}>
-                        <Ionicons name="person-circle-outline" size={28} color="#fff" style={{ marginLeft: 16 }} />
+                        <Ionicons name="person-circle-outline" size={28} color={theme.colors.buttonText} style={{ marginLeft: theme.spacing.small }} />
                     </TouchableOpacity>
                 ),
             }}

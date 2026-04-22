@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Link } from 'expo-router';
 import { useAuth } from '../../context/AuthContext';
+import theme from '../../constants/theme';
 
 const UserPage = () => {
     const { user, signOut } = useAuth();
@@ -34,29 +35,30 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        padding: 20,
-        backgroundColor: '#f5f5f5',
+        padding: theme.spacing.large,
+        backgroundColor: theme.colors.background,
     },
     welcomeText: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginBottom: 10,
+        fontSize: theme.fontSize.title,
+        fontWeight: 600,
+        marginBottom: theme.spacing.small,
+        color: theme.colors.primary,
     },
     infoText: {
-        fontSize: 16,
-        color: '#000',
-        marginBottom: 20,
+        fontSize: theme.fontSize.medium,
+        color: theme.colors.text,
+        marginBottom: theme.spacing.medium,
     },
     logoutButton: {
-        backgroundColor: '#FF8200',
-        paddingVertical: 10,
-        paddingHorizontal: 20,
-        borderRadius: 5,
+        backgroundColor: theme.colors.primary,
+        paddingVertical: theme.spacing.small,
+        paddingHorizontal: theme.spacing.medium,
+        borderRadius: theme.borderRadius.medium,
     },
     logoutButtonText: {
-        color: '#fff',
-        fontSize: 16,
-        fontWeight: 'bold',
+        color: theme.colors.buttonText,
+        fontSize: theme.fontSize.medium,
+        fontWeight: 600,
     },
 });
 

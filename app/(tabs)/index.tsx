@@ -1,6 +1,7 @@
 import { StyleSheet, View, Image, Text } from 'react-native';
 import { Link } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import theme from '../../constants/theme';
 
 export default function Index() {
     return (
@@ -31,7 +32,7 @@ export default function Index() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FFF',
+        backgroundColor: theme.colors.background,
     },
     content: {
         flex: 1,
@@ -39,27 +40,25 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     text: {
-        color: '#fff',
+        color: theme.colors.text,
     },
     button: {
-        backgroundColor: '#FF8200',
+        backgroundColor: theme.colors.primary,
         width: '75%',
-        paddingVertical: 10,
-        paddingHorizontal: 20,
-        borderRadius: 5,
+        paddingVertical: theme.spacing.small,
+        paddingHorizontal: theme.spacing.medium,
+        borderRadius: theme.borderRadius.medium,
         alignItems: 'center',
         justifyContent: 'center',
-        marginVertical: 10,
+        marginVertical: theme.spacing.small,
     },
     buttonText: {
-        color: '#FFF',
-        fontSize: 20,
-        fontWeight: 'bold',
+        color: theme.colors.buttonText,
+        fontSize: theme.fontSize.large,
+        fontWeight: 600,
     },
     image: {
         width: '100%',
-        alignSelf: 'center',
-        marginVertical: 10,
-        marginBottom: 20,
+        height: 'auto',
     }
 });
